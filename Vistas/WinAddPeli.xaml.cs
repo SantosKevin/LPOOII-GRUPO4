@@ -44,7 +44,10 @@ namespace Vistas
                 }
             }
             else
+            {   // que onda xd
                 MessageBox.Show("algo incorrecto");
+            }
+               
         }
 
         /*
