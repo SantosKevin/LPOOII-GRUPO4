@@ -1,0 +1,6 @@
+C:\Users\Falcao\source\repos\LPOOII_GRUPO04\ClasesBase\bin\Debug\ClasesBase.dll
+C:\Users\Falcao\source\repos\LPOOII_GRUPO04\ClasesBase\bin\Debug\ClasesBase.pdb
+C:\Users\Falcao\source\repos\LPOOII_GRUPO04\ClasesBase\obj\Debug\ClasesBase.csprojAssemblyReference.cache
+C:\Users\Falcao\source\repos\LPOOII_GRUPO04\ClasesBase\obj\Debug\ClasesBase.csproj.CoreCompileInputs.cache
+C:\Users\Falcao\source\repos\LPOOII_GRUPO04\ClasesBase\obj\Debug\ClasesBase.dll
+C:\Users\Falcao\source\repos\LPOOII_GRUPO04\ClasesBase\obj\Debug\ClasesBase.pdb

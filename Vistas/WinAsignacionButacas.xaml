@@ -1,0 +1,205 @@
+﻿<Window x:Class="Vistas.WinAsignacionButacas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:local="clr-namespace:Vistas"
+        mc:Ignorable="d"
+        Title="WinAsignacionButacas" Height="700" Width="700" WindowStartupLocation="CenterScreen" WindowStyle="None">
+          
+        <DockPanel>
+
+        <Border DockPanel.Dock="Top">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#141E30" Offset="0.0"></GradientStop>
+                    <GradientStop Color="#243B55" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Border.Background>
+            
+            <DockPanel x:Name="dockMenu" LastChildFill="False" Background="Transparent" 
+                   Grid.Row="0" Grid.ColumnSpan="3" Height="40" VerticalAlignment="Top" Width="auto" MouseDown="DockMenu_MouseDown">
+
+                <Border BorderBrush="White"  BorderThickness="1" DockPanel.Dock="Bottom" Width="auto">
+                </Border>
+                <Button x:Name="btnCerrar" Margin="00,0,20,0" BorderThickness="0" DockPanel.Dock="Right" 
+                    Background="Transparent" Cursor="Hand" Click="BtnCerrar_Click" >
+                    <fa:ImageAwesome Icon="Close" Width="30" Height="40"  Foreground="White" Cursor="" />
+                </Button>
+                <Button x:Name="btnMaxi" BorderThickness="0" Margin="0,0,10,0" DockPanel.Dock="Right" Background="Transparent" Click="BtnMaxi_Click"  >
+                    <fa:ImageAwesome Icon="WindowMaximize" Width="30" Height="40"  Foreground="White" />
+                </Button>
+                <Button x:Name="btnNormal" BorderThickness="0" Margin="0,0,10,0" DockPanel.Dock="Right" Background="Transparent" Click="BtnNormal_Click" >
+                    <fa:ImageAwesome Icon="WindowRestore" Width="30" Height="40"  Foreground="White" Cursor="Hand" />
+                </Button>
+                <Button x:Name="btnMin" BorderThickness="0" Margin="0,0,10,0" DockPanel.Dock="Right" Background="Transparent"  Height="40" VerticalAlignment="Top" Click="BtnMin_Click" Cursor="Hand">
+                    <fa:ImageAwesome Icon="Minus" Width="30" Height="40"  Foreground="White" />
+                </Button>
+
+
+
+            </DockPanel>
+        </Border>
+            
+        <Border DockPanel.Dock="Top">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#141E30" Offset="0.0"></GradientStop>
+                    <GradientStop Color="#243B55" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBlock Text="ASIGNACION DE BUTACAS" Margin="0,10,0,10" Foreground="White" HorizontalAlignment="Center" Height="30" FontSize="20" FontWeight="Bold" FontFamily="Century Gothic"></TextBlock>
+        </Border>
+
+        <DockPanel DockPanel.Dock="Top" >
+
+            <Border Name="brdFilas" DockPanel.Dock="Left" Width="120">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF03225B" Offset="0.0"></GradientStop>
+                        <GradientStop Color="#243B55" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <TextBlock Text="FILAS" FontSize="18" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center"
+                           Margin="0,10,0,0" 
+                           Foreground="White" FontFamily="Century Gothic" FontWeight="Bold"></TextBlock>
+
+              
+
+
+            </Border>
+
+            <Border BorderThickness="5" BorderBrush="White" CornerRadius="5">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#283048" Offset="0.0"></GradientStop>
+                        <GradientStop Color="#859398" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <TextBlock Text="PANTALLA" FontSize="18" Margin="0,10,0,10"
+                            HorizontalAlignment="Center" 
+                           Foreground="White" FontFamily="Century Gothic" FontWeight="Bold"></TextBlock>
+            </Border>
+
+        </DockPanel>
+
+
+        <DockPanel DockPanel.Dock="Bottom">
+            <Border Width="120">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF22375B" Offset="0.0"></GradientStop>
+                        <GradientStop Color="#243B55" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Border DockPanel.Dock="Bottom">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#283048" Offset="0.0"></GradientStop>
+                        <GradientStop Color="#859398" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,10" HorizontalAlignment="Center">
+                    <Border BorderBrush="White" BorderThickness="3"  
+                    Height="40" 
+                    Background="Transparent" 
+                    Width="140" 
+                    CornerRadius="10">
+                        <Button x:Name="btnAceptar" Width="auto" BorderThickness="0"
+                        Height="auto" Foreground="White"
+                        Content="ACEPTAR" Background="Transparent" FontSize="18" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" />
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="3" 
+                   Height="40" 
+                    Background="Transparent" 
+                    Width="140"  Margin="30,0,0,0"
+                    CornerRadius="10">
+                        <Button x:Name="btnCancelar" Width="auto" BorderThickness="0"
+                        Height="auto" Foreground="White" 
+                        Content="CANCELAR" Background="Transparent" FontSize="18" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand"
+                                Click="BtnCancelar_Click"/>
+                    </Border>
+                </StackPanel>
+            </Border>
+
+            <Border DockPanel.Dock="Bottom">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#283048" Offset="0.0"></GradientStop>
+                        <GradientStop Color="#859398" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,10" HorizontalAlignment="Center">
+                    <TextBlock Text="Disponible" Foreground="white" FontSize="16"
+                               VerticalAlignment="Center" ></TextBlock>
+                    <Border BorderBrush="#FF403E3E" BorderThickness="3"  
+                    Height="40"  VerticalAlignment="Center"
+                    Background="Gray" 
+                    Width="40"  Margin="10,0,30,0"
+                    CornerRadius="10">
+
+                    </Border>
+                    <TextBlock Text="Su eleccion" VerticalAlignment="Center" Foreground="white" FontSize="16"></TextBlock>
+                    <Border BorderBrush="Green" BorderThickness="3"  
+                    Height="40" VerticalAlignment="Center"
+                    Background="#FF00D800" 
+                    Width="40" Margin="10,0,30,0"
+                    CornerRadius="10">
+
+                    </Border>
+
+                    <TextBlock Text="Ocupado" Foreground="white" 
+                               VerticalAlignment="Center" FontSize="16"></TextBlock>
+                    <Border BorderBrush="#FFAE0606" BorderThickness="3"  
+                    Height="40" VerticalAlignment="Center"
+                    Background="Red" Margin="10,0,30,0"
+                    Width="40" 
+                    CornerRadius="10">
+
+                    </Border>
+                </StackPanel>
+            </Border>
+
+        </DockPanel>
+            
+       
+
+
+        <DockPanel >
+            
+            <Border DockPanel.Dock="Left" >
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF22375B" Offset="0.0"></GradientStop>
+                        <GradientStop Color="#243B55" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+                
+                <!--aqui va creando en codigo las filas-->
+                <Grid Name="gridFilas" Width="120" HorizontalAlignment="Center" >
+                   
+                </Grid> 
+            </Border>
+
+            <Border >
+                <Grid x:Name="myGrid">
+
+                    <Grid.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="img/butacas.jpg"
+                    AlignmentY="Top" AlignmentX="Center" Opacity=".7"/>
+                    </Grid.Background>
+
+                </Grid>
+
+            </Border>
+            
+        </DockPanel>
+
+    </DockPanel>
+
+   
+    
+</Window>
