@@ -88,22 +88,18 @@ namespace Vistas
             Usuario encontrado = main.verificarUsuario(usu, pass);
             if (encontrado.Usu_nombreUsuario != null)
             {
-                MessageBox.Show(encontrado.Usu_nombreUsuario + " " + encontrado.Rol_codigo);
+                //MessageBox.Show(encontrado.Usu_nombreUsuario + " " + encontrado.Rol_codigo);
                 this.Hide();
                 main.usuarioConectado.Usu_nombreUsuario = encontrado.Usu_nombreUsuario;
                 main.usuarioConectado.Rol_codigo = encontrado.Rol_codigo;
                 main.modificar_menu();
                 main.actualizar_nombre();
                 main.ShowDialog();
-               
                 this.Close();
             }
             else
             {
-                string message = "Datos incorrectos";
-                string caption = "Error";
-                MessageBoxButton buttons = MessageBoxButton.OK;
-                MessageBox.Show(message, caption, buttons);
+                MessageBox.Show("Datos incorrectos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

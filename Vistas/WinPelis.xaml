@@ -4,9 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vistas"
-          xmlns:fa="http://schemas.fontawesome.io/icons/"
-        mc:Ignorable="d"
-        >
+          xmlns:fa="http://schemas.fontawesome.io/icons/" Background="Transparent"
+        mc:Ignorable="d">
+    <!--animacion en la entrada del usercontrol-->
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <ThicknessAnimation Duration="0:0:0.3" Storyboard.TargetProperty="Margin" From="0,-500,0,500" To="0" DecelerationRatio=".9" />
+                    <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetProperty="Opacity" From="0" To="1" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+    
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.2*"></ColumnDefinition>
@@ -20,7 +31,7 @@
             <RowDefinition Height="0.8*"></RowDefinition>
             <RowDefinition Height="0.1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Border Grid.ColumnSpan="4" Grid.RowSpan="4">
+        <!--<Border Grid.ColumnSpan="4" Grid.RowSpan="4">
              <Border.Background>
             <LinearGradientBrush>
                     <GradientStop Color="#2980b9" Offset="0.0"></GradientStop>
@@ -28,7 +39,7 @@
             </LinearGradientBrush>
         </Border.Background>
         
-        </Border>
+        </Border> -->
        
         <Border  Height="auto" Grid.ColumnSpan="4" Grid.Row="0" >
         
@@ -52,7 +63,7 @@
         <Border Grid.Column="2" Grid.Row="1" Margin="0,0,0,8" VerticalAlignment="Center">
             <StackPanel DockPanel.Dock="Right"  HorizontalAlignment="Right" VerticalAlignment="Center">
                 <Border BorderBrush="#FF47E000" Margin="10,0,0,0" BorderThickness="3" Name="MyBorder"  
-                    Height="50" 
+                    Height="42" 
                     Background="Transparent" 
                     
                     CornerRadius="10">

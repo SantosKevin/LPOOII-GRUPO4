@@ -131,7 +131,8 @@ namespace Vistas
             Butaca seleccionada = listaButacas[f, c];
             if (seleccionada.But_estado == "disp")
             {
-                btn.Background = Brushes.Green;
+                BrushConverter bc = new BrushConverter(); //para trabajar con color en hexadecimal
+                btn.Background = (Brush)bc.ConvertFrom("#FF00D800");
                 listaButacas[f, c].But_estado = "selec";
             }
             else

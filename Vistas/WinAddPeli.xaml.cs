@@ -72,7 +72,10 @@ namespace Vistas
             {
                 if (chk.IsChecked == true)
                 {
-                    cadena += ", " + chk.Content;
+                    if (cadena.Length == 0)
+                        cadena += chk.Content;
+                    else
+                        cadena += ", " + chk.Content;
                 }
             }
             return cadena;
