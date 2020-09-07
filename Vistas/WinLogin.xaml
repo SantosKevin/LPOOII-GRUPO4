@@ -37,16 +37,16 @@
             <Border BorderBrush="White"  BorderThickness="1" DockPanel.Dock="Bottom" Width="auto">
             </Border>
             <Button x:Name="btnCerrar" Margin="00,0,20,0" BorderThickness="0" DockPanel.Dock="Right" 
-                    Background="Transparent" Cursor="Hand" Click="BtnCerrar_Click" >
-                <fa:ImageAwesome Icon="Close" Width="30" Height="40"  Foreground="White" Cursor="" />
+                    Background="Transparent" Cursor="Hand" Focusable="False" Click="BtnCerrar_Click" >
+                <fa:ImageAwesome Icon="Close" Width="30" Height="40"  Foreground="White" Cursor="Hand" Focusable="False" />
             </Button>
-            <Button x:Name="btnMaxi" BorderThickness="0" Margin="0,0,10,0" DockPanel.Dock="Right" Background="Transparent" Click="BtnMaxi_Click"  >
+            <Button x:Name="btnMaxi" BorderThickness="0" Margin="0,0,10,0" DockPanel.Dock="Right" Background="Transparent" Click="BtnMaxi_Click" Cursor="Hand" Focusable="False">
                 <fa:ImageAwesome Icon="WindowMaximize" Width="30" Height="40"  Foreground="White" />
             </Button>
-            <Button x:Name="btnNormal" BorderThickness="0" Margin="0,0,10,0" DockPanel.Dock="Right" Background="Transparent" Click="BtnNormal_Click" >
+            <Button x:Name="btnNormal" BorderThickness="0" Margin="0,0,10,0" DockPanel.Dock="Right" Background="Transparent" Click="BtnNormal_Click" Cursor="Hand" Focusable="False">
                 <fa:ImageAwesome Icon="WindowRestore" Width="30" Height="40"  Foreground="White" Cursor="Hand" />
             </Button>
-            <Button x:Name="btnMin" BorderThickness="0" Margin="0,0,10,0" DockPanel.Dock="Right" Background="Transparent"  Height="40" VerticalAlignment="Top" Click="BtnMin_Click" Cursor="Hand">
+            <Button x:Name="btnMin" BorderThickness="0" Margin="0,0,10,0" DockPanel.Dock="Right" Background="Transparent"  Height="40" VerticalAlignment="Top" Click="BtnMin_Click" Cursor="Hand" Focusable="False">
                 <fa:ImageAwesome Icon="Minus" Width="30" Height="40"  Foreground="White" />
             </Button>
 
