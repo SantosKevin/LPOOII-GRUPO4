@@ -37,22 +37,15 @@
             </Border>
             <Button x:Name="btnCerrar" Margin="0,0,20,0" BorderThickness="0" DockPanel.Dock="Right" 
                     Background="Transparent" Cursor="Hand" Click="BtnCerrar_Click" >
-                <fa:ImageAwesome Icon="Close" Width="30" Height="40"  Foreground="White" Cursor="" />
+                <fa:ImageAwesome Icon="Close" Width="30" Height="40"  Foreground="White" Cursor="Hand" Focusable="False"/>
             </Button>
-            
-           
             <Button x:Name="btnMin" BorderThickness="0" Margin="0,0,10,0" DockPanel.Dock="Right" Background="Transparent"  Height="40" VerticalAlignment="Top" Cursor="Hand" Click="BtnMin_Click">
-                <fa:ImageAwesome Icon="Minus" Width="30" Height="40"  Foreground="White" />
+                <fa:ImageAwesome Icon="Minus" Width="30" Height="40"  Foreground="White" Focusable="False"  Cursor="Hand"/>
             </Button>
-
-
-
         </DockPanel>
-        
+
         <StackPanel Name="stckPeli" Orientation="Vertical" Height="auto"  Grid.Column="0" Grid.Row="1">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock x:Name="txtTituloCliente" Margin="0,10,0,40" Text="ALTA PELICULAS" Foreground="White" FontSize="22" FontFamily="Century Gothic" FontWeight="Bold"></TextBlock>
-            </StackPanel>
+            <TextBlock x:Name="txtTituloCliente" Margin="0,10,0,40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="ALTA PELICULAS" Foreground="White" FontSize="22" FontFamily="Century Gothic" FontWeight="Bold"></TextBlock>
             <StackPanel Margin="0,0,0,10" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Titulo:" Width="95" HorizontalContentAlignment="Left" Foreground="White" FontFamily="Century Gothic" FontSize="18" FontWeight="Bold"></Label>
                 <Border CornerRadius="3"
@@ -60,7 +53,6 @@
                     <TextBox x:Name="txtTitulo" Width="200" Margin="0,0,0,0"
                          Background="Transparent" Foreground="White" FontSize="18" ></TextBox>
                 </Border>
-
             </StackPanel>
 
             <StackPanel Margin="0,0,0,10" Orientation="Horizontal" HorizontalAlignment="Center">
@@ -71,37 +63,81 @@
                     <TextBox x:Name="txtDuracion" Width="200" Margin="0,0,0,0"
                          Background="Transparent" Foreground="White" FontSize="18" ></TextBox>
                 </Border>
-
             </StackPanel>
             <StackPanel Margin="0,0,0,10" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Width="95" HorizontalContentAlignment="Left" 
                     Content="Generos:" Foreground="White" FontFamily="Century Gothic" FontSize="18" FontWeight="Bold"></Label>
                 <Border CornerRadius="3"
                         Margin="20,0,0,0" BorderBrush="White" Width="200" BorderThickness="2">
-                    <ComboBox x:Name="cmbGenero" Height="28" Width="200" HorizontalAlignment="Center" 
-                        VerticalAlignment="Top" FontSize="18" IsSynchronizedWithCurrentItem="True">
-                        <CheckBox Name="chkAccion" Content="Accion"></CheckBox>
-                        <CheckBox Name="chkDrama" Content="Drama"></CheckBox>
-                        <CheckBox Name="chkComedia" Content="Comedia"></CheckBox>
-                        <CheckBox Name="chkCienciaF" Content="Ciencia Ficcion"></CheckBox>
-                    </ComboBox>
-                </Border>
+                   <!-- <ComboBox x:Name="cmbGenero" Height="28" Width="200" HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" FontSize="18" IsSynchronizedWithCurrentItem="True">
+                        <CheckBox Name="chkAccion" Margin="0,2,0,0">
+                            <TextBlock Margin="0,-4,0,0">Acción</TextBlock>
+                        </CheckBox>
+                        <CheckBox Name="chkDrama">
+                            <TextBlock Margin="0,-4,0,0">Drama</TextBlock>
+                        </CheckBox>
+                        <CheckBox Name="chkComedia">
+                            <TextBlock Margin="0,-4,0,0">Comedia</TextBlock>
+                        </CheckBox>
+                        <CheckBox Name="chkCienciaF" >
+                            <TextBlock Margin="0,-4,0,0">Ciencia Ficción</TextBlock>
+                        </CheckBox>
+                    </ComboBox>-->
+                    <Expander Name="myExpander" HorizontalAlignment="Left"  Background="#FFE2EFFC" BorderBrush="Transparent"
+                        ExpandDirection="Down" IsExpanded="False" Width="200" >
+                        <Expander.Header>
+                            <Label x:Name="lblGenero"/>
 
+
+                        </Expander.Header>
+                        <ListBox x:Name="lBoxGenero" 
+                            SelectionMode="Multiple" SelectionChanged="LBoxGenero_SelectionChanged">
+                            <ListBoxItem Name="Acción">Acción</ListBoxItem>
+                            <ListBoxItem Name="Drama">Drama</ListBoxItem>
+                            <ListBoxItem Name="Comedia">Comedia</ListBoxItem>
+                            <ListBoxItem Name="CienciaFicción">Ciencia Ficción</ListBoxItem>
+                        </ListBox>
+                    </Expander>
+                </Border>
             </StackPanel>
             <StackPanel Margin="0,0,0,10" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Width="95" HorizontalContentAlignment="Left"
                     Content="Clase:" Foreground="White" FontFamily="Century Gothic" FontSize="18" FontWeight="Bold"></Label>
                 <Border CornerRadius="3"
                         Margin="20,0,0,0" BorderBrush="White" Width="200" BorderThickness="2">
-                    <ComboBox x:Name="cmbClase" Height="28" Width="200" HorizontalAlignment="Center" 
+                    <!--<ComboBox x:Name="cmbClase" Height="28" Width="200" HorizontalAlignment="Center" 
                         VerticalAlignment="Top" FontSize="18">
-                        <CheckBox Name="APT" Content="APT"></CheckBox>
-                        <CheckBox Name="sam13" Content="Sam 13"></CheckBox>
-                        <CheckBox Name="sam16" Content="Sam 16"></CheckBox>
-                        <CheckBox Name="sam18" Content="Sam 18"></CheckBox>
-                    </ComboBox>
-                </Border>
+                        <CheckBox Name="APT" Margin="0,2,0,0">
+                            <TextBlock Margin="0,-4,0,0">APT</TextBlock>
+                        </CheckBox>
+                        <CheckBox Name="sam13">
+                            <TextBlock Margin="0,-4,0,0">Sam 13</TextBlock>
+                        </CheckBox>
+                        <CheckBox Name="sam16">
+                            <TextBlock Margin="0,-4,0,0">Sam 16</TextBlock>
+                        </CheckBox>
+                        <CheckBox Name="sam18" >
+                            <TextBlock Margin="0,-4,0,0">Sam 18</TextBlock>
+                        </CheckBox>
+                    </ComboBox>-->
+                    <Expander Name="expanderClase" HorizontalAlignment="Left"   Background="#FFE2EFFC" BorderBrush="Transparent"
+                        ExpandDirection="Down" IsExpanded="False" Width="200" >
+                        <Expander.Header>
+                            <Label x:Name="lblClase"/>
 
+
+                        </Expander.Header>
+                        <ListBox x:Name="lBoxClase"
+                            SelectionMode="Single" SelectionChanged="LBoxClase_SelectionChanged">
+                            <ListBoxItem Name="apt">APT</ListBoxItem>
+                            <ListBoxItem Name="sam13">SAM 13</ListBoxItem>
+                            <ListBoxItem Name="sam16">SAM 16</ListBoxItem>
+                            <ListBoxItem Name="sam18">SAM 18</ListBoxItem>
+                        </ListBox>
+                    </Expander>
+
+                </Border>
             </StackPanel>
             <StackPanel Margin="0,0,0,10" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Width="95" HorizontalContentAlignment="Left"
@@ -111,7 +147,6 @@
                     <TextBox x:Name="txtPrecio" Width="200" Margin="0,0,0,0"
                          Background="Transparent" Foreground="White" FontSize="18" ></TextBox>
                 </Border>
-
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,30,0,0" HorizontalAlignment="Center">
                 <Border BorderBrush="White" BorderThickness="3"  

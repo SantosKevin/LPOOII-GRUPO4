@@ -130,7 +130,41 @@
 
                     </StackPanel>
                 </Button>
+                <StackPanel Orientation="Horizontal" Margin="0,10" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent">
+                    <Border CornerRadius="2" Background="White" Margin="5">
+                        <Button x:Name="btnCerrarSesion" HorizontalContentAlignment="Center" Height="auto" Width="auto" BorderBrush="Transparent" Click="BtnCerrarSesion_Click">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF080C11" Offset="1.1"/>
+                                    <GradientStop Color="#FF84B6FF"/>
+                                    <GradientStop Color="#FF68ABD2" Offset="1"/>
+                                    <GradientStop Color="#FF69ACD4" Offset="1"/>
+                                    <GradientStop Color="#FF235795" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Height="40" Width="40">
+                                <fa:ImageAwesome  DockPanel.Dock="Right" Margin="10,0,0,0" Icon="UserTimes" Width="20" Foreground="White"></fa:ImageAwesome>
+                            </StackPanel>
+                        </Button>
+                    </Border>
+                    <Border CornerRadius="2" Background="White" Margin="5">
+                        <Button HorizontalContentAlignment="Center" Height="auto" Width="auto" Foreground="Bisque" BorderBrush="Transparent">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF080C11" Offset="1.1"/>
+                                    <GradientStop Color="#FF84B6FF"/>
+                                    <GradientStop Color="#FF68ABD2" Offset="1"/>
+                                    <GradientStop Color="#FF69ACD4" Offset="1"/>
+                                    <GradientStop Color="#FF235795" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
 
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Height="40" Width="40">
+                                <fa:ImageAwesome  DockPanel.Dock="Right" Margin="10,0,0,0" Icon="Cogs" Width="20" Foreground="White"/>
+                            </StackPanel>
+                        </Button>
+                    </Border>
+                </StackPanel>
             </StackPanel>
 
         </Border>

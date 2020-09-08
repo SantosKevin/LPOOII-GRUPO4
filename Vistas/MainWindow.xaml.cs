@@ -107,9 +107,7 @@ namespace Vistas
 
         private void BtnClose_Click(object sender, RoutedEventArgs e)
         {
-            WinLogin wlogin = new WinLogin();
-            this.Hide();
-            wlogin.Show();
+            App.Current.Shutdown();
         }
 
         //abrir las ventanas hijas
@@ -145,6 +143,13 @@ namespace Vistas
         {
             WinAsignacionButacas wAsignButacas = new WinAsignacionButacas();
             wAsignButacas.ShowDialog();
+        }
+
+        private void BtnCerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            WinLogin wlogin = new WinLogin();
+            this.Hide();
+            wlogin.Show();
         }
     }
 }

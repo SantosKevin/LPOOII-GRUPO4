@@ -55,13 +55,13 @@
 
             <fa:ImageAwesome Icon="Search" DockPanel.Dock="Right" Width="25" Margin="10,0,0,5" Foreground="White"></fa:ImageAwesome>
 
-            <TextBox x:Name="btnBuscarPeli" Height="30" DockPanel.Dock="Left" 
-                     Text="Buscar Pelicula..."  FontSize="18" Padding="5,0,0,0" Margin="0,10,0,5"/>
+            <TextBox x:Name="btnBuscarPeli"  Height="30" DockPanel.Dock="Left" 
+                     Text="Buscar Pelicula..." FontSize="18" Padding="5,0,0,0" Margin="0,10,0,5"/>
 
         </DockPanel>
 
-        <Border Grid.Column="2" Grid.Row="1" Margin="0,0,0,8" VerticalAlignment="Center">
-            <StackPanel DockPanel.Dock="Right"  HorizontalAlignment="Right" VerticalAlignment="Center">
+       
+            <StackPanel DockPanel.Dock="Right"  HorizontalAlignment="Right"   Grid.Column="2" Grid.Row="1" Margin="0,0,0,8" VerticalAlignment="Center">
                 <Border BorderBrush="#FF47E000" Margin="10,0,0,0" BorderThickness="3" Name="MyBorder"  
                     Height="42" 
                     Background="Transparent" 
@@ -81,7 +81,7 @@
                     </Button>
                 </Border>
             </StackPanel>
-        </Border>
+        
 
         <Border Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" BorderThickness="3" BorderBrush="White" CornerRadius="4">
             <DockPanel LastChildFill="True">

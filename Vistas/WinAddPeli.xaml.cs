@@ -44,7 +44,7 @@ namespace Vistas
                 }
             }
             else
-            {   // que onda xd
+            {   
                 MessageBox.Show("algo incorrecto");
             }
                
@@ -57,8 +57,8 @@ namespace Vistas
         {
             oPeli.Peli_titulo = txtTitulo.Text;
             oPeli.Peli_duracion = Convert.ToInt32(txtDuracion.Text);
-            oPeli.Peli_genero = devolver_cadena_checkbox(cmbGenero);
-            oPeli.Peli_clase = devolver_cadena_checkbox(cmbClase);
+            oPeli.Peli_genero = devolver_cadena_listbox(lBoxGenero);
+            oPeli.Peli_clase = ((ListBoxItem)lBoxClase.SelectedItem).Content.ToString();
             oPeli.Peli_precio = Convert.ToDouble(txtPrecio.Text);
         }
 
@@ -81,6 +81,21 @@ namespace Vistas
             return cadena;
         }
 
+        public string devolver_cadena_listbox(ListBox lbox)
+        {
+            string cadena = "";
+        
+    
+            for (int i = 0; i < lbox.SelectedItems.Count; i++)
+            {
+                if( i == 0)
+                    cadena += ((ListBoxItem)lbox.SelectedItems[i]).Content.ToString();
+                else
+                    cadena +=  " - " + ((ListBoxItem)lbox.SelectedItems[i]).Content.ToString();
+            }
+
+            return cadena;
+        }
         /*
          * limpia los campos del formulario de clientes
          */
@@ -142,5 +157,22 @@ namespace Vistas
             if (e.ChangedButton == MouseButton.Left)
                 DragMove();
         }
+
+        private void LBoxGenero_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lblGenero.Content = "";
+            for (int i = 0; i < lBoxGenero.SelectedItems.Count; i++)
+            {
+                if (i == 0)
+                    lblGenero.Content += ((ListBoxItem)lBoxGenero.SelectedItems[i]).Content.ToString();
+                else
+                    lblGenero.Content += " - " + ((ListBoxItem)lBoxGenero.SelectedItems[i]).Content.ToString();
+            }
+        }
+
+        private void LBoxClase_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lblClase.Content = ((ListBoxItem)lBoxClase.SelectedItem).Content.ToString();
+        }   
     }
 }
